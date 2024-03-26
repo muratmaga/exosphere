@@ -14,3 +14,13 @@
   systemd:
     name: 'polkit'
     state: 'restarted'
+
+- name: GTK Theme directory created
+  file:
+    path: '/home/exouser/.config/gtk-3.0'
+    state: 'directory'
+
+- name: XFCE Workspace Changer theme
+  copy:
+    src: 'gtk.css'
+    dest: '/home/exouser/.config/gtk-3.0/gtk.css'
